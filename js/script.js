@@ -1,6 +1,7 @@
 
 $(function(){
   $('div.div').hide().first().show();
+  $('input').next('em').hide();
   $('li').click(function() {
     event.preventDefault();
     $(this).toggleClass('active');
@@ -14,6 +15,15 @@ $(function(){
 
 
   });
+
+
+  $('input').hover(function(){
+    $(this).next('em').animate({opacity: "show", left: "150"},"show");
+  }, function(){
+    $(this).next("em").animate({opacity: "hide", left: "150"}, "fast");
+  })
+
+
 
 
 
